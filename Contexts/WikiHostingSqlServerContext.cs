@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WikiHostingApi.Entities;
 using WikiHostingApi.Extensions;
 
 namespace WikiHostingApi.Contexts;
 
+[SuppressMessage("ReSharper", "PropertyCanBeMadeInitOnly.Global")]
 public class WikiHostingSqlServerContext(DbContextOptions options)
     : IdentityDbContext<User>(options)
 {
